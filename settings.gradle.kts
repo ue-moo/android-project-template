@@ -19,4 +19,15 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "AndroidProjectTemplate"
+
+val modules = listOf(
+    "feature-sample",
+)
+
+modules.forEach { filePath ->
+    val (type, name) = filePath.split("-")
+    val newProjectName = ":$type:$name"
+    include(newProjectName)
+}
+
 include(":app")

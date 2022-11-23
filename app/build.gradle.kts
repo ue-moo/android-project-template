@@ -8,6 +8,8 @@ plugins {
 android.namespace = "com.github.uemoo.androidprojecttemplate"
 
 dependencies {
+    implementation(projects.feature.sample)
+
     implementation(libs.composeMaterialIcons)
     implementation(libs.composeMaterial3WindowSizeClass)
     implementation(libs.androidXChromeCustomTabs)
