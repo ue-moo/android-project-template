@@ -1,0 +1,49 @@
+#!/bin/sh
+
+COMMIT_MSG_FILE=$1
+COMMIT_SOURCE=$2
+SHA1=$3
+
+parse_ticket_id() {
+  echo "$1" | /usr/bin/perl -ne 'print "$1" if m|feature/([A-Z][A-Z0-9_]*-[0-9]+)|'
+}
+
+parse_ticket_id_from_file() {
+  head -n 1 "$1" | /usr/bin/perl -ne 'print "$1" if m|^\[([A-Z][A-Z0-9_]*-[0-9]+)]|'
+}
+
+parse_issue_id() {
+    echo "$1" | /usr/bin/perl -ne 'print "issue-$2" if m|feature/(issue-)?([0-9]+)|'
+}
+
+parse_issue_id_from_file() {
+  head -n 1 "$1" | /usr/bin/perl -ne 'print "$1" if m|^\[(issue-[0-9]+)\]|'
+}
+
+insert_ticket_id_to_file() {
+  filename="$1"
+  ticket_id="$2"
+
+  /usr/bin/perl -i -n -e 'if ($line_index++) { print "$_"; } else { print "['$ticket_id'] $_"; }' "$filename"
+}
+
+# Get a current branch name.
+branch_name=`git rev-parse --abbrev-ref HEAD`
+
+# Parse Ticket id from the branch name.
+ticket_id=`parse_ticket_id "$branch_name"`
+
+
+# Parse ticket id in COMMIT_MSG_FILE. (Backlog or JIRA)
+existing_ticket_id=`parse_ticket_id_from_file "$COMMIT_MSG_FILE"`
+
+# Parse GitHub issue ID
+issue_id=`parse_issue_id "$branch_name"`
+existing_issue_id=`parse_issue_id_from_file "$COMMIT_MSG_FILE"`
+
+# Insert ticket id into COMMIT_MSG_FILE if does not exist.
+if [ "$ticket_id" != "" ] && [ "$existing_ticket_id" = "" ]; then
+    insert_ticket_id_to_file "$COMMIT_MSG_FILE" "$ticket_id"
+elif [ "$issue_id" != "" ] && [ "$existing_issue_id" = "" ]; then
+    insert_ticket_id_to_file "$COMMIT_MSG_FILE" "$issue_id"
+fi
