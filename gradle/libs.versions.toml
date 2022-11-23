@@ -1,0 +1,175 @@
+[versions]
+androidGradlePlugin = "7.3.1"
+kotlin = "1.7.10"
+molecule = "0.5.0"
+buildkonfig = "0.13.3"
+
+androidxCore = "1.9.0"
+androidxAppCompat = "1.6.0-rc01"
+androidDesugarJdkLibs = "2.0.0"
+compose = "1.3.1"
+composeCompiler = "1.3.1"
+composeMaterial3WindowSizeClass = "1.0.0-rc01"
+composeMaterial3 = "1.0.0-rc01"
+androidxFragment = "1.5.3"
+androidxLifecycle = "2.5.1"
+androidxActivity = "1.6.0"
+androidxNavigationCompose = "2.5.2"
+androidxDatastore = "1.0.0"
+hiltNavigationCompose = "1.0.0"
+junit = "4.13.2"
+androidxTestExt = "1.1.3"
+androidxTestEspresso = "3.4.0"
+androidxTestUiAutomator = "2.2.0"
+androidxMacroBenchmark = "1.2.0-alpha05"
+androidxProfileinstaller = "1.2.0"
+dagger = "2.44.2"
+spotless = "6.11.0"
+ktlint = "0.45.2"
+kotlinxCollectionsImmutable = "0.3.5"
+ktor = "2.1.2"
+kotlinxCoroutines = "1.6.4"
+zipline = "0.9.5"
+ziplineSnapshot = "1.0.0-SNAPSHOT"
+okHttp = "4.10.0"
+sqldelight = "1.5.4"
+kotlinxSerialization = "1.4.1"
+multiplatformSettings = "0.9"
+robolectric = "4.9"
+kermit = "1.1.3"
+kotlinxDatetime = "0.4.0"
+accompanist = "0.26.2-beta"
+firebasePlugin = "4.3.14"
+multiplatformFirebaseAuth = "1.6.2"
+firebaseCommon = "20.2.0"
+firebaseAuth = "21.0.8"
+androidxStartup = "1.1.1"
+kluent = "1.69"
+coilCompose = "2.2.2"
+koin = "3.2.2"
+androidXChromeCustomTabs = "1.4.0"
+ksp = "1.7.10-1.0.6"
+paparazzi = "1.0.0"
+showkase = "1.0.0-beta13"
+testParameterInjector = "1.9"
+mokoResources = "0.20.1"
+detekt = '1.22.0-RC2'
+androidxSplashScreen = "1.0.0"
+twitterComposeRulesDetekt = "0.0.20"
+playOssLicenses = "17.0.0"
+playOssLicensesPlugin = "0.10.5"
+
+[libraries]
+androidGradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
+kotlinGradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+spotlessGradlePlugin = { group = "com.diffplug.spotless", name = "spotless-plugin-gradle", version.ref = "spotless" }
+hiltGradlePlugin = { group = "com.google.dagger", name = "hilt-android-gradle-plugin", version.ref = "dagger" }
+moleculeGradlePlugin = { module = "app.cash.molecule:molecule-gradle-plugin", version.ref = "molecule" }
+composeCompiler = { group = "androidx.compose.compiler", name = "compiler", version.ref = "composeCompiler" }
+kotlinSerializationPlugin = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
+buildkonfigPlugin = { module = "com.codingfeline.buildkonfig:buildkonfig-gradle-plugin", version.ref = "buildkonfig" }
+ziplineKotlinPlugin = { module = "app.cash.zipline:zipline-kotlin-plugin", version.ref = "zipline" }
+ziplineGradlePlugin = { module = "app.cash.zipline:zipline-gradle-plugin", version.ref = "zipline" }
+firebasePlugin = { module = "com.google.gms:google-services", version.ref = "firebasePlugin" }
+mokoResourcesPlugin = { module = "dev.icerock.moko:resources-generator", version.ref = "mokoResources" }
+androidDesugarJdkLibs = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "androidDesugarJdkLibs" }
+detektGradlePlugin = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
+kspGradlePlugin = { module = "com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
+paparazziGradlePlugin = { module = "app.cash.paparazzi:paparazzi-gradle-plugin", version.ref = "paparazzi" }
+playOssLicensesPlugin = { module = "com.google.android.gms:oss-licenses-plugin", version.ref = "playOssLicensesPlugin" }
+crashlyticsPlugin = { module = "com.google.firebase:firebase-crashlytics-gradle", version = "2.9.2" }
+
+composeRuntime = { module = "androidx.compose.runtime:runtime", version.ref = "compose" }
+composeUi = { module = "androidx.compose.ui:ui", version.ref = "compose" }
+composeUiGoogleFonts = { module = "androidx.compose.ui:ui-text-google-fonts", version.ref = "compose" }
+composeMaterial = { module = "androidx.compose.material:material", version.ref = "compose" }
+composeMaterialIcons = { module = "androidx.compose.material:material-icons-extended", version.ref = "compose" }
+composeMaterial3 = { module = "androidx.compose.material3:material3", version.ref = "composeMaterial3" }
+composeUiToolingPreview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
+composeUiTestJunit4 = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "compose" }
+composeUiTooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
+composeUiTestManifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "compose" }
+composeMaterial3WindowSizeClass = { module = "androidx.compose.material3:material3-window-size-class", version.ref = "composeMaterial3WindowSizeClass" }
+daggerHiltAndroid = { module = "com.google.dagger:hilt-android", version.ref = "dagger" }
+daggerHiltAndroidCompiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "dagger" }
+
+accompanistPager = { module = "com.google.accompanist:accompanist-pager", version.ref = "accompanist" }
+accompanistFlowlayout = { module = "com.google.accompanist:accompanist-flowlayout", version.ref = "accompanist" }
+accompanistPlaceholder = { module = "com.google.accompanist:accompanist-placeholder-material", version.ref = "accompanist" }
+
+kotlinSerializationJson = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
+
+androidxCoreKtx = { module = "androidx.core:core-ktx", version.ref = "androidxCore" }
+androidxAppCompat = { module = "androidx.appcompat:appcompat", version.ref = "androidxAppCompat"}
+androidxNavigationCompose = { module = "androidx.navigation:navigation-compose", version.ref = "androidxNavigationCompose" }
+androidxLifecycleLifecycleRuntimeKtx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "androidxLifecycle" }
+androidxActivityCompose = { module = "androidx.activity:activity-compose", version.ref = "androidxActivity" }
+androidxFragment = { module = "androidx.fragment:fragment", version.ref = "androidxFragment" }
+androidxDatastorePreferences = { module = "androidx.datastore:datastore-preferences", version.ref = "androidxDatastore" }
+androidxStartup = { module = "androidx.startup:startup-runtime", version.ref = "androidxStartup" }
+androidXChromeCustomTabs = { module = "androidx.browser:browser", version.ref = "androidXChromeCustomTabs" }
+androidxSplashScreen = { module = "androidx.core:core-splashscreen", version.ref = "androidxSplashScreen" }
+
+multiplatformSettingsCoroutines = { module = "com.russhwolf:multiplatform-settings-coroutines", version.ref = "multiplatformSettings" }
+multiplatformSettingsDatastore = { module = "com.russhwolf:multiplatform-settings-datastore", version.ref = "multiplatformSettings" }
+
+material3 = { module = "com.google.android.material:material", version = "1.6.1" }
+
+hiltNavigationCompose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
+
+ktorClientCore = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktorClientOkHttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
+ktorClientDarwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }
+ktorKotlinxSerialization = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktorContentNegotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+kotlinxCoroutinesCore = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
+kotlinxDatetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinxDatetime" }
+zipline = { module = "app.cash.zipline:zipline", version.ref = "zipline" }
+ziplineSnapshot = { module = "app.cash.zipline:zipline", version.ref = "ziplineSnapshot" }
+ziplineLoader = { module = "app.cash.zipline:zipline-loader", version.ref = "zipline" }
+okHttpCore = { module = "com.squareup.okhttp3:okhttp", version.ref = "okHttp" }
+okHttpLoggingInterceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "okHttp" }
+sqldelightGradlePlugin = { module = "com.squareup.sqldelight:gradle-plugin", version.ref = "sqldelight" }
+sqldelightDriverAndroid = { module = "com.squareup.sqldelight:android-driver", version.ref = "sqldelight" }
+sqldelightDriverNative = { module = "com.squareup.sqldelight:native-driver", version.ref = "sqldelight" }
+sqldelightExtensionsCoroutines = { module = "com.squareup.sqldelight:coroutines-extensions", version.ref = "sqldelight" }
+kotlinxCollectionsImmutable = { module = "org.jetbrains.kotlinx:kotlinx-collections-immutable", version.ref = "kotlinxCollectionsImmutable" }
+kermit = { module = "co.touchlab:kermit", version.ref = "kermit" }
+multiplatformFirebaseAuth = { module = "dev.gitlive:firebase-auth", version.ref = "multiplatformFirebaseAuth" }
+firebaseCommon = { module = "com.google.firebase:firebase-common", version.ref = "firebaseCommon" }
+firebaseAuth = { module = "com.google.firebase:firebase-auth", version.ref = "firebaseAuth" }
+coilCompose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
+mokoResources = { module = "dev.icerock.moko:resources", version.ref = "mokoResources" }
+mokoResourcesCompose = { module = "dev.icerock.moko:resources-compose", version.ref = "mokoResources" }
+playOssLicenses = { module = "com.google.android.gms:play-services-oss-licenses", version.ref="playOssLicenses" }
+crashlytics = { module = "com.google.firebase:firebase-crashlytics-ktx", version = "18.3.0" }
+crashlyticsAnalytics = { module = "com.google.firebase:firebase-analytics-ktx", version = "21.2.0" }
+
+twitterComposeRulesDetekt = { module = "com.twitter.compose.rules:detekt", version.ref = "twitterComposeRulesDetekt" }
+
+# iOS
+koin = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+
+# test
+junit = { module = "junit:junit", version.ref = "junit" }
+androidxTestExtJunit = { module = "androidx.test.ext:junit", version.ref = "androidxTestExt" }
+androidxTestEspressoEspressoCore = { module = "androidx.test.espresso:espresso-core", version.ref = "androidxTestEspresso" }
+androidxTestUiAutomator = {module = "androidx.test.uiautomator:uiautomator", version.ref = "androidxTestUiAutomator"}
+androidxMacroBenchmark = { module = "androidx.benchmark:benchmark-macro-junit4", version.ref = "androidxMacroBenchmark" }
+androidxProfileinstaller = { group = "androidx.profileinstaller", name = "profileinstaller", version.ref = "androidxProfileinstaller" }
+hiltAndroidTesting = { group = "com.google.dagger", name = "hilt-android-testing", version.ref = "dagger" }
+robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectric" }
+kluentAndroid = { module = "org.amshove.kluent:kluent-android", version.ref = "kluent" }
+showkaseRuntime = { group = "com.airbnb.android", name = "showkase", version.ref = "showkase" }
+showkaseProcessor = { group = "com.airbnb.android", name = "showkase-processor", version.ref = "showkase" }
+testParameterInjector = { group = "com.google.testparameterinjector", name = "test-parameter-injector", version.ref = "testParameterInjector" }
+
+[plugins]
+androidGradlePlugin = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+androidGradleLibraryPlugin = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+kotlinPlugin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+hiltGradlePlugin = { id = "com.google.dagger.hilt.android", version.ref = "dagger" }
+kspPlugin = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+paparazziPlugin = { id = "app.cash.paparazzi", version.ref = "paparazzi" }
+sqldelightGradlePlugin = { id = "com.squareup.sqldelight", version.ref = "sqldelight" }
+detektPlugin = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
