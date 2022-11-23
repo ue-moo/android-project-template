@@ -32,6 +32,7 @@ kotlinxCoroutines = "1.6.4"
 zipline = "0.9.5"
 ziplineSnapshot = "1.0.0-SNAPSHOT"
 okHttp = "4.10.0"
+retrofit = "2.9.0"
 sqldelight = "1.5.4"
 kotlinxSerialization = "1.4.1"
 multiplatformSettings = "0.9"
@@ -100,7 +101,7 @@ accompanistPlaceholder = { module = "com.google.accompanist:accompanist-placehol
 kotlinSerializationJson = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
 
 androidxCoreKtx = { module = "androidx.core:core-ktx", version.ref = "androidxCore" }
-androidxAppCompat = { module = "androidx.appcompat:appcompat", version.ref = "androidxAppCompat"}
+androidxAppCompat = { module = "androidx.appcompat:appcompat", version.ref = "androidxAppCompat" }
 androidxNavigationCompose = { module = "androidx.navigation:navigation-compose", version.ref = "androidxNavigationCompose" }
 androidxLifecycleLifecycleRuntimeKtx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "androidxLifecycle" }
 androidxActivityCompose = { module = "androidx.activity:activity-compose", version.ref = "androidxActivity" }
@@ -141,7 +142,7 @@ firebaseAuth = { module = "com.google.firebase:firebase-auth", version.ref = "fi
 coilCompose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
 mokoResources = { module = "dev.icerock.moko:resources", version.ref = "mokoResources" }
 mokoResourcesCompose = { module = "dev.icerock.moko:resources-compose", version.ref = "mokoResources" }
-playOssLicenses = { module = "com.google.android.gms:play-services-oss-licenses", version.ref="playOssLicenses" }
+playOssLicenses = { module = "com.google.android.gms:play-services-oss-licenses", version.ref = "playOssLicenses" }
 crashlytics = { module = "com.google.firebase:firebase-crashlytics-ktx", version = "18.3.0" }
 crashlyticsAnalytics = { module = "com.google.firebase:firebase-analytics-ktx", version = "21.2.0" }
 
@@ -154,7 +155,7 @@ koin = { module = "io.insert-koin:koin-core", version.ref = "koin" }
 junit = { module = "junit:junit", version.ref = "junit" }
 androidxTestExtJunit = { module = "androidx.test.ext:junit", version.ref = "androidxTestExt" }
 androidxTestEspressoEspressoCore = { module = "androidx.test.espresso:espresso-core", version.ref = "androidxTestEspresso" }
-androidxTestUiAutomator = {module = "androidx.test.uiautomator:uiautomator", version.ref = "androidxTestUiAutomator"}
+androidxTestUiAutomator = { module = "androidx.test.uiautomator:uiautomator", version.ref = "androidxTestUiAutomator" }
 androidxMacroBenchmark = { module = "androidx.benchmark:benchmark-macro-junit4", version.ref = "androidxMacroBenchmark" }
 androidxProfileinstaller = { group = "androidx.profileinstaller", name = "profileinstaller", version.ref = "androidxProfileinstaller" }
 hiltAndroidTesting = { group = "com.google.dagger", name = "hilt-android-testing", version.ref = "dagger" }
@@ -163,6 +164,11 @@ kluentAndroid = { module = "org.amshove.kluent:kluent-android", version.ref = "k
 showkaseRuntime = { group = "com.airbnb.android", name = "showkase", version.ref = "showkase" }
 showkaseProcessor = { group = "com.airbnb.android", name = "showkase-processor", version.ref = "showkase" }
 testParameterInjector = { group = "com.google.testparameterinjector", name = "test-parameter-injector", version.ref = "testParameterInjector" }
+
+daggerHiltCore = { module = "com.google.dagger:hilt-core", version.ref = "dagger" }
+daggerHiltCompiler = { module = "com.google.dagger:hilt-compiler", version.ref = "dagger" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+retrofit2KotlinxSerializationConverter = { module = "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter", version = "0.8.0" }
 
 [plugins]
 androidGradlePlugin = { id = "com.android.application", version.ref = "androidGradlePlugin" }
@@ -173,3 +179,6 @@ kspPlugin = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 paparazziPlugin = { id = "app.cash.paparazzi", version.ref = "paparazzi" }
 sqldelightGradlePlugin = { id = "com.squareup.sqldelight", version.ref = "sqldelight" }
 detektPlugin = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+
+kotlinKapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }

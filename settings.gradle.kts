@@ -31,3 +31,5 @@ modules.forEach { filePath ->
 }
 
 include(":app")
+include(":apiclient")
+includeBuild("tools/api-client-generator")
